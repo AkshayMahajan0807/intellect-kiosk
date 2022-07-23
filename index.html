@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 
     <title>Chain App Dev - App Landing Page HTML5 Template</title>
-
+    <script src="vendor/jquery/jquery.min.js"></script>
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -30,6 +30,7 @@ https://templatemo.com/tm-570-chain-app-dev
     <link rel="stylesheet" href="assets/css/templatemo-chain-app-dev.css">
     <link rel="stylesheet" href="assets/css/animated.css">
     <link rel="stylesheet" href="assets/css/owl.css">
+    <script src="https://cdn.socket.io/4.5.0/socket.io.min.js" integrity="sha384-7EyYLQZgWBi67fBtVxw60/OWl1kjsfrPFcaU0pp0nAh+i8FD068QogUvg85Ewy1k" crossorigin="anonymous"></script>
 
   </head>
 
@@ -52,7 +53,7 @@ https://templatemo.com/tm-570-chain-app-dev
                       <a href="#contact">Free Quote <i class="fab fa-apple"></i></a>
                     </div>
                     <div class="white-button scroll-to-section">
-                      <a href="#contact">Free Quote <i class="fab fa-google-play"></i></a>
+                      <button onclick="sendPrescription('23456')" >Free Quote <i class="fab fa-google-play"></i></a>
                     </div>
                   </div>
                 </div>
@@ -67,14 +68,33 @@ https://templatemo.com/tm-570-chain-app-dev
         </div>
       </div>
     </div>
+    <button id="start" type="button">Start</button>
+<div id="jitsi-container">
   </div>
-
+  <script>
+    var button = document.querySelector('#start');
+    var container = document.querySelector('#jitsi-container');
+    var api = null;
+    
+    button.addEventListener('click', () => {
+        var domain = "meet.jit.si";
+        var options = {
+            "roomName": "foo-bar-c8cfdb0d-135a-4462-a05b-36575c3ef591",
+            "parentNode": container,
+            "width": 600,
+            "height": 200,
+        };
+        api = new JitsiMeetExternalAPI(domain, options);
+    });
+    
+    </script>
 
 
 
   <!-- Scripts -->
-  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="https://meet.jit.si/external_api.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/socket.js"></script>
   <script src="assets/js/owl-carousel.js"></script>
   <script src="assets/js/animation.js"></script>
   <script src="assets/js/imagesloaded.js"></script>
