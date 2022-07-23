@@ -223,7 +223,7 @@ body {
 }
 
 .white-button a:hover {
-  background-color: #4b8ef1;
+  background-color: #e98947;
   color: #fff !important;
 }
 
@@ -894,7 +894,7 @@ Banner Style
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  padding: 250px 120px 150px 120px;
+  padding: 150px 120px 150px 120px;
   position: relative;
   overflow: hidden;
 }
@@ -950,7 +950,7 @@ Banner Style
 }
 
 .main-banner .left-content .white-button a {
-  background-color: #4b8ef1;
+  background-color: #e98947;
   color: #fff !important;
 }
 
@@ -1976,9 +1976,6 @@ responsive
   .header-area {
     background-color: #fff;
   }
-  .main-banner:after {
-    display: none;
-  } 
   .main-banner .left-content h2 {
     color: #2a2a2a;
     margin-right: 0;
@@ -1988,7 +1985,7 @@ responsive
     margin-right: 0;
   }
   .main-banner .left-content .white-button a {
-    background-color: #4b8ef1;
+    background-color: #e98947 !important;
     color: #fff !important;
   }
   form#contact {
@@ -2002,7 +1999,6 @@ responsive
   }
   .main-banner {
     text-align: center;
-    padding: 226px 0px 30px 0px;
   }
   .main-banner:before {
     display: none;

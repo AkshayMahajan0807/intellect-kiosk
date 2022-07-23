@@ -1,0 +1,15 @@
+.overflow-hidden {
+    overflow: hidden;
+}
+.w-100p{
+    width: 100px;
+}
+.h-45p{
+    height: 45px;
+}
+.sf-orange{
+background-color: orange;
+}
+.w-120p a{
+    width: 120px !important;
+}
