@@ -5,14 +5,15 @@ const path = require("path");
 function createWindow() {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
-    width: 1000,
-    height: 700,
+    show: false,
+    frame: false,
     webPreferences: {
       preload: path.join(__dirname, "preload.js"),
       nodeIntegration: true,     // ATENÇÃO AQUI - attention here - that's why your node_module works or not
     },
   });
-
+  mainWindow.maximize();
+  mainWindow.show();
   // and load the index.html of the app.
   mainWindow.loadFile("index.html");
 

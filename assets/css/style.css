@@ -92,3 +92,8 @@
     margin-bottom: 30px;
     line-height: 27px;
 }
+
+.home-btn {
+	margin: 20px;
+    width: 100px;
+}
