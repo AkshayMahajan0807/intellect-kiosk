@@ -1384,8 +1384,8 @@ The Clients
 }
 
 .pricing-item-regular .icon img {
-  width: 120px;
-  height: 106px;
+  width: auto;
+  height: 91px;
   margin-bottom: 30px;
 }
 
