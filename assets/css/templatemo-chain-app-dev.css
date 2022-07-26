@@ -1335,7 +1335,7 @@ The Clients
 }
 
 .pricing-item-regular {
-  margin-top: 30px;
+  
   box-shadow: 0px 0px 15px rgba(0,0,0,0.07);
   border-radius: 50px;
   padding: 90px 30px;
@@ -1381,12 +1381,13 @@ The Clients
   font-size: 20px;
   font-weight: 700;
   margin-bottom: 30px;
+  line-height: 30px;
 }
 
 .pricing-item-regular .icon img {
   width: auto;
   height: 91px;
-  margin-bottom: 30px;
+  margin-bottom: 2px;
 }
 
 .pricing-item-regular ul li {

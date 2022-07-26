@@ -79,7 +79,6 @@
 }
 
 .fix-height-50p {
-    height: 50px;
     overflow: hidden;
 }
 .back-img-gradient {
@@ -96,4 +95,25 @@
 .home-btn {
 	margin: 20px;
     width: 100px;
+<<<<<<< HEAD
 }
+
+.w-126p {
+	width: 126px;
+}
+
+.back-button {
+	position: absolute;
+    bottom: 0px;
+    left: 18px;
+	border-width: thin;
+    border-color: skyblue;
+	
+}
+
+  .mt-30p {
+	margin-top: 30px;
+  }
+=======
+}
+>>>>>>> origin/master

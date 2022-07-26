@@ -4,7 +4,25 @@
   "description": "Test for printer - thermal printers too",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "build-installer": "electron-builder"
+  },
+  "build": {
+    "appId": "kiosk-app",
+    "productName": "e-Doctor Seva",
+    "target": "NSIS",
+    "directories": {
+      "buildResources": "build"
+    },
+    "win": {
+      "asar": false,
+      "target": "nsis"
+    },
+    "nsis": {
+      "license": "license.txt",
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
   },
   "repository": "https://github.com/fssonca/electron-printer",
   "keywords": [
@@ -17,7 +35,11 @@
   ],
   "author": "Fernando Sousa",
   "devDependencies": {
-    "electron": "^9.1.0"
+    "cross-env": "^5.1.3",
+    "electron": "^9.1.0",
+    "electron-packager": "^15.5.1",
+    "electron-builder": "^23.1.0",
+    "electron-winstaller": "^5.0.0"
   },
   "dependencies": {
     "electron-pos-printer": "^1.2.0"
