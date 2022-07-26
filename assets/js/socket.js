@@ -5,7 +5,7 @@ const path = require("path");
 
 let webContents = remote.getCurrentWebContents();
 let printers = webContents.getPrinters(); //list the printers
-console.log(printers);
+
 let printerName="POS Printer 203DPI  Series";
   let widthPage="220px";
 
@@ -38,9 +38,10 @@ console.log(message);
   }
 }
 
-const socket = io("http://localhost:4000");
+const socket = io("https://socket-kiosk.herokuapp.com");
 console.log(socket);
 const PRESCRIPTION = "newPrescription";
+const SENDMEET = "sendMeetInvite";
 // client-side
 socket.on("connect", () => {
     console.log(socket.id); // x8WIv7-mJelg7on_ALbx
@@ -72,4 +73,12 @@ socket.on("connect", () => {
       senderId: socket.id,
     });
   };
+  const sendMeetInvite = (messageBody) => {
+    console.log("Sending  MEET")
+     socket.emit(SENDMEET, {
+       body: 'https://meet.jit.si/intellect-doctor',
+       senderId: socket.id,
+     });
+   };
+ 
 
